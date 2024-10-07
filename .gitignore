@@ -1,0 +1,33 @@
+# Archivos y directorios generales
+dist/               # Directorio de archivos generados
+build/              # Otro nombre común para compilados
+coverage/
+.DS_Store           # Archivos de sistema de macOS
+Thumbs.db           # Archivos de sistema de Windows
+.vscode/            # Configuraciones de VS Code específicas del usuario
+.idea/              # Configuraciones de WebStorm o PhpStorm
+
+# Archivos de configuración local o confidenciales
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Archivos de logs y cache
+*.log               # Archivos de log de desarrollo
+*.cache             # Archivos de cache
+.cache/             # Directorio de cache en algunos frameworks
+tmp/                # Archivos temporales
+
+# Sistema Control de versiones
+.gitignore          # GIT
+
+# JavaScript/TypeScript
+node_modules/       # Directorio de módulos en Node.js
+*.tsbuildinfo       # Archivo de cache de TypeScript
+coverage/           # Informes de cobertura de pruebas (ej: Jest)
+
+# Otros archivos específicos de lenguajes
+
+

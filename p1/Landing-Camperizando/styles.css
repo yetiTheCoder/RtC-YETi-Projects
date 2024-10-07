@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+
+:root {
+  --yt-p1-primary-color: #f1f1f1;
+  --yt-p1-secondary-color: #e5ab00;
+  --yt-p1-terciary-color: #222329;
+  --yt-p1-terciary-alpha-color: #222329e0;
+  --yt-p1-card-background-color: #22232990;
+  --yt-p1-contrast-color: #6cffa4;
+
+  --yt-p1-primary-font: "'Roboto:wght@100'", sans-serif;
+
+  --primary-font-size: 1rem;
+  --secondary-font-size: 1rem;
+  --terciary-font-size: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--yt-p1-primary-font);
+  font-size: var(--primary-font-size);
+  color: var(--yt-p1-primary-color);
+  background-image: url(./assets/Background-image-dron.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+  height: 56px;
+  top: 0;
+  z-index: 3;
+  align-items: center;
+  position: sticky;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  animation: topToBottom 0.5s ease-in-out;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+.logo {
+  width: 180px;
+  margin: 0px 5px;
+  filter: invert(1);
+}
+
+nav > ul > li > a {
+  color: var(--yt-p1-primary-color);
+}
+
+
+
+.bar-btn {
+  font-size: var(--secondary-font-size);
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+
+/* NAV */
+.nav-menu {
+  position: fixed;
+  width: 100%;
+  height: 0vh;
+  top: 56px;
+  background: var(--yt-p1-terciary-alpha-color);
+  text-align: center;
+  transition: all 300ms;
+}
+
+.nav-menu li {
+  display: none;
+  line-height: 2rem;
+  margin: 2rem 0;
+  transition: all 300ms;
+}
+
+.nav-menu li a {
+  color: var(--yt-p1-secondary-color);
+  font-size: var(--primary-font-size);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nav-menu li a:hover,
+#home-active {
+  color: var(--yt-p1-contrast-color);
+  transition: 300ms ease;
+  transform: scale(1.2);
+}
+
+.nav-menu li a:active {
+  color: var(--yt-p1-primary-color);
+  transition: 300ms;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ .nav-menu {
+  height: 100vh;
+}
+
+#check:checked ~ .nav-menu li {
+  display: block;
+}
+
+
+
+
+
+
+
+/* MAIN */
+
+main {
+  z-index: 1;
+  /* gap: 5rem; */
+}
+
+
+.section {
+    margin: 32 0 0 0px;
+}
+
+
+/* Section Banner */
+.banner {
+  display: flex;
+  flex-direction: left;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.banner > div {
+  margin: 10px;
+}
+
+.banner span {
+  color: var(--yt-p1-contrast-color);
+  font-weight: 900;
+}
+
+#claim > p {
+  /* display: flex;
+  flex-direction: row; */
+  width: 30%;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+/* Section Camperizadores */
+#camperizadores {
+  z-index: 1;
+  text-align: center;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+#camperizadores > h2 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.card {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--yt-p1-card-background-color);
+  border-top-left-radius: 16px 24px;
+  border-top-right-radius: 16px 24px;
+  border-bottom-left-radius: 16px 24px;
+  border-bottom-right-radius: 16px 24px;
+  gap: 0.5rem;
+}
+
+.card > img {
+  z-index: 1;
+  width: 100%;
+  height: 20vh;
+  position: center; 
+  border-top-right-radius: 16px 24px;
+  border-top-left-radius: 16px 24px;
+  object-fit: cover;
+}
+
+.camperizador {
+  z-index: 1;
+  margin: 0.5rem 1rem;
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.camperizador > h2 {
+  font-size: var(--secondary-font-size);
+  color: var(--yt-p1-secondary-color);
+}
+
+
+details {
+  list-style: none;
+}
+
+::-webkit-details-marker {   
+  display:none; 
+}
+
+details > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+
+summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align:center;
+  align-items: center;
+  justify-content:center;
+  font-size: var(--secondary-font-size);
+  font-weight: 700;
+  color: var(--yt-p1-contrast-color);
+  background-color: var(--yt-p1-terciary-color);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--yt-p1-terciary-color);
+  border-radius: 15px;
+  margin: 1rem;
+}
+
+.info:hover {
+  background-color: var(--yt-p1-contrast-color);
+  color: var(--yt-p1-terciary-color);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--yt-p1-contrast-color);
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.info:active {
+  background-color: var(--yt-p1-contrast-color);
+  color: var(--yt-p1-terciary-color);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--yt-p1-terciary-color);
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.descrip-camperizador {
+  z-index: 1;
+  margin: 1.5rem;
+  text-align: start;
+}
+
+.btn-presupuesto {
+  padding: 0.4rem 0.8rem;
+  margin: 1rem;
+  font-weight: 700;
+}
+
+.btn {
+  background-color: var(--yt-p1-terciary-color);
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--yt-p1-terciary-color);
+  border-radius: 8px;
+  color: var(--yt-p1-secondary-color);
+}
+
+.btn:hover {
+  color: var(--yt-p1-terciary-color);
+  background-color: var(--yt-p1-secondary-color);
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--yt-p1-secondary-color);
+  transition: all 300ms ease;
+}
+
+.btn:active {
+  color: var(--yt-p1-terciary-color);
+  background-color: var(--yt-p1-secondary-color);
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--yt-p1-terciary-color);
+  transition: all 300ms ease;
+}
+
+
+/* Section Viajar en Camper */
+#en-camper {
+  z-index: 1;
+  text-align: center;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 5rem;
+  background-color: var(--yt-p1-card-background-color);
+  margin: 32px 8px;
+  padding-top: 16px;
+  border-top-left-radius: 16px 24px;
+  border-top-right-radius: 16px 24px;
+  border-bottom-left-radius: 16px 24px;
+  border-bottom-right-radius: 16px 24px;
+}
+
+#en-camper > h1 {
+  font-weight: 500;
+}
+
+#en-camper > h1 > span {
+  color: var(--yt-p1-contrast-color);
+}
+
+#en-camper > div {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+} 
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* FOOTER */
+
+footer {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--yt-p1-card-background-color);
+  /* color: var(--yt-p1-terciary-color); */
+}
+footer > div {
+  margin-top: 1.5rem;
+}
+
+
+#unete {
+  margin: 2rem;
+}
+
+.consejo {
+  color: var(--yt-p1-primary-color);
+}
+
+.btn-mail {
+  padding: 0.3rem 0.6rem;
+  background-color: var(--yt-p1-terciary-color);
+  border-width: 2px;
+  border-radius: 0.6rem;
+  color: var(--yt-p1-secondary-color);
+  font-weight: 500;
+}
+
+.checkbox-politics {
+  margin: 0.5rem;
+  color: var(--yt-p1-secondary-color);
+  align-items: center;
+  text-align: center;
+}
+
+.checkbox-politics > label > a {
+  color: var(--yt-p1-secondary-color);
+  text-decoration: underline;
+}
+
+#yeti {
+  margin: 1rem 3rem 0.5rem 3rem;
+  font-size: 12px;
+  color: var(--yt-p1-primary-color);
+}
+#yeti > span {
+  color: var(--yt-p1-contrast-color);
+}
+
+
+
+
+
+/* MEDIAS */
+/* Tablet */
+@media (min-width: 700px) {
+  header {
+    width: 100%;
+    height: 65px;
+  }
+  .logo {
+    width: 200px;
+    margin-left:  8px;
+  }
+
+  .bar-btn {
+    display: none;
+  }
+  .nav-menu {
+    position:relative;
+    height: 60px;
+    top: 0;
+    background: none;
+    transition: none;
+    text-align: right;
+    margin-right: 8px;
+  }
+
+  .nav-menu li {
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 20px;
+    transition: none;
+  }
+
+  .nav-menu li a {
+    font-size: 12px ;
+  }
+
+  #claim > h2 > p {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+
+  .cards {
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .section-title {
+    font-size: var(--secondary-font-size);
+  }
+
+}
+
+
+
+/* Desktop */
+@media (min-width: 900px) {
+  header {
+    width: 100%;
+    height: 80px;
+  }
+  .logo {
+    width: 250px;
+  }
+
+  #claim > h2 > p {
+    font-size: 60px;
+    font-weight: 300;
+  }  
+ 
+  .bar-btn {
+    display: none;
+  }
+
+  .nav-menu li a {
+    font-size: 14px ;
+  }
+  .cards {
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .section-title {
+    font-size: var(--terciary-font-size);
+  }
+}
