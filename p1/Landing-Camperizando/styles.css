@@ -177,7 +177,7 @@ main {
 .banner {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   top: 0;
   z-index: 1;
   height: var(--yt-p1-banner-height);
@@ -192,7 +192,7 @@ main {
   align-items: flex-end;
 }
 
-#claim > p {
+#claim > h4 {
   z-index: 1;
   height: auto;
   width: 300px;
@@ -474,7 +474,6 @@ footer {
 }
 
 #unete {
-  padding-top: 24px;
   font-size: var(--yt-p1-font-s-size);
   font-weight: 400;
   color: var(--yt-p1-contrast-color);
@@ -572,7 +571,7 @@ footer {
     font-size: var(--yt-p1-font-s-size);
   }
 
-  #claim > p {
+  #claim > h4 {
     width: 500px;
     font-size: var(--yt-p1-font-xl-size);
     font-weight: 500;
@@ -608,7 +607,7 @@ footer {
     width: 250px;
   }
 
-  #claim > p {
+  #claim > h4 {
     width: 900px;
     font-size: var(--yt-p1-font-xxl-size);
     font-weight: 500;
