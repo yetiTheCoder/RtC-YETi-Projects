@@ -10,7 +10,7 @@ Rock{theCode} Learning Program
 ## P1 - Landing page
 
 {...} html, css  
-[url](https://p1-landing-camperizando.vercel.app)  
+[url](https://p1-landingpage.vercel.app)  
 [github](https://github.com/yetiTheCoder/RtC-YETi-Projects/tree/20a816cb9b8a56df4cf45e5a18646ace1277dc40/p1/Landing-Camperizando)  
 
 ## P2 - Modal
