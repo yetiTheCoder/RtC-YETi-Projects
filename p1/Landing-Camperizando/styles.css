@@ -1,18 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&display=swap");
 
 :root {
-  --yt-p1-primary-color: #f1f1f1;
-  --yt-p1-secondary-color: #e5ab00;
+  --yt-p1-primary-color: #487b51;
+  --yt-p1-default-color: #2e4b33;
+  --yt-p1-secondary-color: #ffd24b;
   --yt-p1-terciary-color: #222329;
-  --yt-p1-terciary-alpha-color: #222329e0;
-  --yt-p1-card-background-color: #22232990;
-  --yt-p1-contrast-color: #6cffa4;
+  --yt-p1-terciary-alpha-color: #22232945;
+  --yt-p1-contrast-color: rgb(65, 243, 98);
+  --yt-p1-contrast-2-color: #f1f1f1;
+  --yt-p1-menu-background-color: ##f1f1f190;
+  --yt-p1-card-background-color: #22232930;
+  --yt-p1-background-color: #222329;
+  --yt-p1-background-info-btn-color: #487b51;
+  --yt-p1-box-shadow-color: #6cffa490;
 
-  --yt-p1-primary-font: "'Roboto:wght@100'", sans-serif;
+  --yt-p1-primary-font: "Roboto:weight@100", sans-serif;
 
-  --primary-font-size: 1rem;
-  --secondary-font-size: 1rem;
-  --terciary-font-size: 3rem;
+  --yt-p1-font-s-size: 12px;
+  --yt-p1-font-m-size: 16px;
+  --yt-p1-font-l-size: 24px;
+  --yt-p1-font-xl-size: 32px;
+  --yt-p1-font-xxl-size: 48px;
+  --yt-p1-font-xxxl-size: 64px;
+
+  --yt-p1-text-letter-spacing: 0.5px;
+
+  --yt-p1-menu-height: 65px;
+  --yt-p1-menu-height-medium: 72px;
+  --yt-p1-menu-height-large: 80px;
+
+  --yt-p1-banner-height: 250px;
 }
 
 * {
@@ -29,32 +46,33 @@ html {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   width: 100%;
   z-index: 0;
   display: flex;
   flex-direction: column;
   font-family: var(--yt-p1-primary-font);
-  font-size: var(--primary-font-size);
-  color: var(--yt-p1-primary-color);
-  background-image: url(./assets/Background-image-dron.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  font-size: var(--font-m-size);
+  color: var(--yt-p1-contrast-2-color);
+  background-color: var(--yt-p1-primary-color);
 }
 
 /* HEADER */
-
 header {
   width: 100%;
-  height: 56px;
+  height: var(--yt-p1-menu-height);
   top: 0;
   z-index: 3;
   align-items: center;
   position: sticky;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  animation: topToBottom 0.5s ease-in-out;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  animation: topToBottom 0.5s ease-in-out all;
+  background-color: var(--yt-p1-terciary-alpha-color);
 }
 
 nav {
@@ -70,54 +88,61 @@ nav {
   filter: invert(1);
 }
 
-nav > ul > li > a {
-  color: var(--yt-p1-primary-color);
-}
-
-
-
-.bar-btn {
-  font-size: var(--secondary-font-size);
-  margin-right: 15px;
+.logo:hover {
   cursor: pointer;
 }
 
+.logo:active {
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: 200ms ease;
+}
+
+.bar-btn {
+  font-size: var(--yt-p1-font-m-size);
+  margin-right: 15px;
+  cursor: pointer;
+}
 
 /* NAV */
 .nav-menu {
   position: fixed;
   width: 100%;
   height: 0vh;
-  top: 56px;
-  background: var(--yt-p1-terciary-alpha-color);
-  text-align: center;
+  top: 64px;
+  text-align: right;
+  padding-right: 8px;
   transition: all 300ms;
+  background-color: var(--yt-p1-terciary-alpha-color);
 }
 
 .nav-menu li {
   display: none;
-  line-height: 2rem;
-  margin: 2rem 0;
   transition: all 300ms;
+  margin: 8px 8px 16px 8px;
 }
 
 .nav-menu li a {
   color: var(--yt-p1-secondary-color);
-  font-size: var(--primary-font-size);
+  font-size: var(--yt-p1-font-s-size);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
+  gap: 8px 12px;
+  border-radius: 12px;
 }
 
 .nav-menu li a:hover,
 #home-active {
   color: var(--yt-p1-contrast-color);
-  transition: 300ms ease;
+  transition: 200ms ease;
   transform: scale(1.2);
 }
 
 .nav-menu li a:active {
   color: var(--yt-p1-primary-color);
-  transition: 300ms;
+  mix-blend-mode: difference;
+  transform: scale(0.9);
+  transition: 200ms ease;
 }
 
 #check {
@@ -125,126 +150,156 @@ nav > ul > li > a {
 }
 
 #check:checked ~ .nav-menu {
-  height: 100vh;
+  align-items: right;
+  justify-content: right;
+  height: auto;
 }
 
 #check:checked ~ .nav-menu li {
   display: block;
 }
 
-
-
-
-
-
-
 /* MAIN */
 
 main {
   z-index: 1;
-  /* gap: 5rem; */
 }
 
+#home {
+  scroll-margin-top: var(--yt-p1-menu-height);
+}
 
 .section {
-    margin: 32 0 0 0px;
+  margin: 32 0 0 0px;
 }
-
 
 /* Section Banner */
 .banner {
   display: flex;
-  flex-direction: left;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
   z-index: 1;
-  padding: 2rem;
+  height: var(--yt-p1-banner-height);
+  background-image: url(./assets/Background-image-dron.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
 }
 
 .banner > div {
-  margin: 10px;
-}
-
-.banner span {
-  color: var(--yt-p1-contrast-color);
-  font-weight: 900;
+  gap: 10px;
+  align-items: flex-end;
 }
 
 #claim > p {
-  /* display: flex;
-  flex-direction: row; */
-  width: 30%;
+  z-index: 1;
+  height: auto;
+  width: 300px;
+  padding-top: 24px;
+  padding-right: 32px;
+  padding-bottom: 24px;
+  padding-left: 24px;
   text-align: left;
-  font-size: 2rem;
+  font-size: var(--yt-p1-font-l-size);
+  color: var(--yt-p1-contrast-2-color);
   font-weight: 500;
+  letter-spacing: calc(-1 * var(--yt-p1-text-letter-spacing));
+  text-shadow: var(--yt-p1-default-color) 0px 0px 16px;
+}
+
+#claim span {
+  color: var(--yt-p1-contrast-color);
+  text-shadow: var(--yt-p1-default-color) 0px 0px 16px;
 }
 
 /* Section Camperizadores */
 #camperizadores {
   z-index: 1;
-  text-align: center;
-  gap: 1rem;
-  margin-top: 5rem;
+  margin: 24px 0px 8px 0px;
+  padding-top: 16px;
+  scroll-margin-top: var(--yt-p1-menu-height);
 }
 
 #camperizadores > h2 {
-  font-weight: 400;
-  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: var(--yt-p1-font-l-size);
+  text-transform: uppercase;
+  letter-spacing: calc(2 * var(--yt-p1-text-letter-spacing));
+  padding: 0px;
+  padding-bottom: 16px;
+  text-align: center;
 }
 
 .cards {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 10px;
-  margin-left: 8px;
-  margin-right: 8px;
+  grid-gap: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 .card {
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  background-color: var(--yt-p1-card-background-color);
+  background-color: var(--yt-p1-terciary-alpha-color);
   border-top-left-radius: 16px 24px;
   border-top-right-radius: 16px 24px;
   border-bottom-left-radius: 16px 24px;
   border-bottom-right-radius: 16px 24px;
-  gap: 0.5rem;
 }
 
 .card > img {
   z-index: 1;
   width: 100%;
-  height: 20vh;
-  position: center; 
+  height: 40vh;
+  position: center;
   border-top-right-radius: 16px 24px;
   border-top-left-radius: 16px 24px;
   object-fit: cover;
 }
 
+a:any-link {
+  color: var(--yt-p1-secondary-color);
+  cursor: pointer;
+}
+
 .camperizador {
   z-index: 1;
-  margin: 0.5rem 1rem;
-  gap: 1rem;
+  width: 100%;
+  margin: 16px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-
+  justify-content: space-between;
+  text-align: center;
 }
 
-.camperizador > h2 {
-  font-size: var(--secondary-font-size);
+.camperizador * > h3 {
   color: var(--yt-p1-secondary-color);
+  font-weight: 700;
+  text-align: center;
+  font-size: var(--yt-p1-font-l-size);
 }
 
-
-details {
-  list-style: none;
+.puntuacion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
 }
 
-::-webkit-details-marker {   
-  display:none; 
+details,
+summary {
+  width: 100%;
+}
+
+::-webkit-details-marker {
+  display: none;
 }
 
 details > div {
@@ -252,9 +307,9 @@ details > div {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 1.5rem;
+  justify-items: center;
+  gap: 24px;
 }
-
 
 summary {
   display: flex;
@@ -262,28 +317,34 @@ summary {
   align-items: center;
 }
 
+.stars {
+  color: var(--yt-p1-secondary-color);
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  padding: 8px;
+}
+
 .info {
-  width: 30px;
+  width: 24px;
+  height: 24px;
   display: flex;
   flex-direction: column;
-  text-align:center;
+  text-align: center;
   align-items: center;
-  justify-content:center;
-  font-size: var(--secondary-font-size);
   font-weight: 700;
   color: var(--yt-p1-contrast-color);
-  background-color: var(--yt-p1-terciary-color);
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
-  border-color: var(--yt-p1-terciary-color);
-  border-radius: 15px;
-  margin: 1rem;
+  border-color: var(--yt-p1-background-info-btn-color);
+  border-radius: 9999px;
+  margin: 8px;
 }
 
 .info:hover {
   background-color: var(--yt-p1-contrast-color);
   color: var(--yt-p1-terciary-color);
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
   border-color: var(--yt-p1-contrast-color);
   cursor: pointer;
@@ -308,23 +369,24 @@ summary {
 
 .btn-presupuesto {
   padding: 0.4rem 0.8rem;
-  margin: 1rem;
-  font-weight: 700;
+  margin: 24px;
 }
 
 .btn {
-  background-color: var(--yt-p1-terciary-color);
-  border-width: 2px;
-  border-style: solid;
-  border-color: var(--yt-p1-terciary-color);
-  border-radius: 8px;
   color: var(--yt-p1-secondary-color);
+  background-color: var(--yt-p1-terciary-color);
+  font-weight: 500;
+  font-size: var(--yt-p1-font-s-size);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(---yt-p1-secondary-color);
+  border-radius: 8px;
 }
 
 .btn:hover {
   color: var(--yt-p1-terciary-color);
   background-color: var(--yt-p1-secondary-color);
-  border-width: 2px;
+  border-width: 0px;
   border-style: solid;
   border-color: var(--yt-p1-secondary-color);
   transition: all 300ms ease;
@@ -333,35 +395,30 @@ summary {
 .btn:active {
   color: var(--yt-p1-terciary-color);
   background-color: var(--yt-p1-secondary-color);
-  border-width: 2px;
+  border-width: 0px;
   border-style: solid;
   border-color: var(--yt-p1-terciary-color);
   transition: all 300ms ease;
 }
 
-
 /* Section Viajar en Camper */
 #en-camper {
   z-index: 1;
-  text-align: center;
-  letter-spacing: 1px;
-  text-align: center;
-  margin-top: 5rem;
-  background-color: var(--yt-p1-card-background-color);
-  margin: 32px 8px;
-  padding-top: 16px;
-  border-top-left-radius: 16px 24px;
-  border-top-right-radius: 16px 24px;
-  border-bottom-left-radius: 16px 24px;
-  border-bottom-right-radius: 16px 24px;
+  margin-top: 32px;
+  scroll-margin-top: var(--yt-p1-menu-height);
 }
 
 #en-camper > h1 {
   font-weight: 500;
+  padding: 16px 0px 8px 0px;
+  font-size: var(--yt-p1-font-xl-size);
+  letter-spacing: calc(-4 * var(--yt-p1-text-letter-spacing));
+  text-align: center;
+  color: var(--yt-p1-contrast-color);
 }
 
 #en-camper > h1 > span {
-  color: var(--yt-p1-contrast-color);
+  color: var(--yt-p1-secondary-color);
 }
 
 #en-camper > div {
@@ -377,7 +434,7 @@ summary {
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%;
-} 
+}
 
 .responsive-iframe {
   position: absolute;
@@ -389,8 +446,6 @@ summary {
   height: 100%;
 }
 
-
-
 /* FOOTER */
 
 footer {
@@ -398,36 +453,66 @@ footer {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: var(--yt-p1-card-background-color);
-  /* color: var(--yt-p1-terciary-color); */
-}
-footer > div {
-  margin-top: 1.5rem;
+  background-color: var(--yt-p1-terciary-color);
 }
 
+#contacto {
+  margin-top: 1.5rem;
+  scroll-margin-top: var(--yt-p1-menu-height);
+  font-size: var(--font-s-size);
+  font-weight: 500;
+  color: var(--yt-p1-contrast-color);
+  letter-spacing: calc(-1 * var(--yt-p1-text-letter-spacing));
+}
+
+#contacto > h2 {
+  margin: 0px 24px 0px 24px;
+  font-size: var(--yt-p1-font-l-size);
+  font-weight: 400;
+  letter-spacing: calc(-2 * var(--yt-p1-text-letter-spacing));
+}
 
 #unete {
-  margin: 2rem;
+  padding-top: 24px;
+  font-size: var(--yt-p1-font-s-size);
+  font-weight: 400;
+  color: var(--yt-p1-contrast-color);
+  letter-spacing: calc(-1 * var(--yt-p1-text-letter-spacing));
 }
-
 .consejo {
-  color: var(--yt-p1-primary-color);
+  padding: 16px;
+  color: var(--yt-p1-contrast-color);
+  font-size: var(--yt-p1-font-s-size);
+  font-weight: 500;
+  letter-spacing: calc(-1 * var(--yt-p1-text-letter-spacing));
 }
 
 .btn-mail {
-  padding: 0.3rem 0.6rem;
-  background-color: var(--yt-p1-terciary-color);
-  border-width: 2px;
+  padding: 4px 8px;
+  background-color: var(--yt-p1-default-color);
+  border-color: var(--yt-p1-contrast-color);
+  border-style: solid;
+  border-width: 1px;
   border-radius: 0.6rem;
-  color: var(--yt-p1-secondary-color);
-  font-weight: 500;
+  color: var(--yt-p1-contrast-color);
+  font-size: var(--yt-p1-font-s-size);
+  font-weight: 400;
+}
+
+.btn-mail:hover {
+  background-color: var(--yt-p1-contrast-color);
+  color: var(--yt-p1-default-color);
 }
 
 .checkbox-politics {
-  margin: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 8px;
+  gap: 8px;
   color: var(--yt-p1-secondary-color);
-  align-items: center;
-  text-align: center;
+  font-size: var(--font-s-size);
+  font-weight: 400;
 }
 
 .checkbox-politics > label > a {
@@ -441,30 +526,32 @@ footer > div {
   color: var(--yt-p1-primary-color);
 }
 #yeti > span {
-  color: var(--yt-p1-contrast-color);
+  letter-spacing: calc(-4 * var(--yt-p1-text-letter-spacing));
+  font-weight: 600;
 }
-
-
-
-
 
 /* MEDIAS */
 /* Tablet */
-@media (min-width: 700px) {
+@media (min-width: 740px) {
   header {
     width: 100%;
     height: 65px;
   }
+
   .logo {
     width: 200px;
-    margin-left:  8px;
+    margin-left: 8px;
+  }
+
+  .btn {
+    font-size: var(--yt-p1-font-m-size);
   }
 
   .bar-btn {
     display: none;
   }
   .nav-menu {
-    position:relative;
+    position: relative;
     height: 60px;
     top: 0;
     background: none;
@@ -481,11 +568,12 @@ footer > div {
   }
 
   .nav-menu li a {
-    font-size: 12px ;
+    font-size: var(--yt-p1-font-s-size);
   }
 
-  #claim > h2 > p {
-    font-size: 2.5rem;
+  #claim > p {
+    width: 500px;
+    font-size: var(--yt-p1-font-xl-size);
     font-weight: 500;
   }
 
@@ -499,34 +587,42 @@ footer > div {
   }
 
   .section-title {
-    font-size: var(--secondary-font-size);
+    font-size: var(--font-xl-size);
   }
 
+  #en-camper h1,
+  #camperizadores h2 {
+    font-size: var(--yt-p1-font-xxl-size);
+  }
 }
-
-
 
 /* Desktop */
 @media (min-width: 900px) {
   header {
     width: 100%;
-    height: 80px;
+    height: var(--yt-p1-menu-height-large);
   }
+
   .logo {
     width: 250px;
   }
 
-  #claim > h2 > p {
-    font-size: 60px;
-    font-weight: 300;
-  }  
- 
+  #claim > p {
+    width: 900px;
+    font-size: var(--yt-p1-font-xxl-size);
+    font-weight: 500;
+  }
+
+  .btn {
+    font-size: var(--yt-p1-font-m-size);
+  }
+
   .bar-btn {
     display: none;
   }
 
   .nav-menu li a {
-    font-size: 14px ;
+    font-size: var(--yt-p1-font-s-size);
   }
   .cards {
     z-index: 1;
@@ -538,6 +634,18 @@ footer > div {
   }
 
   .section-title {
-    font-size: var(--terciary-font-size);
+    font-size: var(--yt-p1-font-xxl-size);
+  }
+
+  #en-camper h1,
+  #camperizadores h2 {
+    font-size: var(--yt-p1-font-xxxl-size);
+  }
+
+  #home,
+  #camperizadores,
+  #en-camper,
+  #contacto {
+    scroll-margin-top: var(--yt-p1-menu-height-large);
   }
 }

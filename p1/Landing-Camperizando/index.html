@@ -15,11 +15,16 @@
 <body>
     <header>
         <nav>
-            <img src="./assets/Camperizando-logo.png" alt="Logo Camperizando" class="logo">
-            <input type="checkbox" id="check">
+            <div>
+                <a href="#home">
+                    <img src="./assets/Camperizando-logo.png" alt="Logo Camperizando" class="logo">
+                </a>
+            </div>
+                
             <label for="check" class="bar-btn">
                 <i  class="fa-solid fa-bars"></i>
             </label>
+            <input type="checkbox" id="check">
             <ul class="nav-menu">
                 <li><a href="#home" id="home-active">Inicio</a></li>
                 <li><a href="#camperizadores">Camperizadores</a></li>
@@ -30,272 +35,328 @@
     </header>
 
     <main>
-        <section class="banner" id="home">
-            <div id="claim">
-                <p>Te encontramos al preparador ideal para <span> Camperizar </span> tu furgoneta</p>
-            </div>
-        </section>
-
-        <section id="camperizadores">
-            <h2 class="section-title">CAMPERIZADORES</h2>
-            <div class="cards">
-                <article class="card">
-                    <img class="image-camperizador" src="./assets/Break-Camper-pynsfabslas1itlgv9pmxbcrzs6nvncglgeh2mu2ls.jpg" alt="Ejemplo de BREAK CAMPER">
-                    <div>
-                        <div class="camperizador">
-                            <h2>BREAK CAMPER</h2>
-                        </div>
-                        <details>
-                            <summary>
-                                <h3> ⭐️4,6</h3>
-                                <p class="info">i</p>
-                            </summary>
-                            <p class="descrip-camperizador">
-                                En Break Camper nos apasiona la aventura tanto como a ti, por ello trasladamos nuestra pasión a la fabricación y personalización de furgonetas camper y vehículos off-road totalmente artesanales.Desde nuestros inicios nuestro objetivo principal es diseñar y fabricar furgos con las mejores capacidad …
-                                <div>
-                                    <a href="https://camperizando.es/camperizador/break-camper/" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
-                                </div>
-                            </p>
-                        </details>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img class="image-camperizador" src="./assets/miniCAMPER.PRO_-1-pygvzcgqgj758t6377a3kactz7qa4sis9259es3sfk.jpg" alt="Ejemplo de MINICAMPER . PRO">
-                    <div>
-                        <div class="camperizador">
-                            <h2>MINICAMPER.PRO</h2>
-                        </div>
-                        <details>
-                            <summary>
-                                <h3> ⭐️4,8</h3>
-                                <p class="info">i</p>
-                            </summary>
-                            <p class="descrip-camperizador">
-                                ¿Te imaginas escaparte, aparcar y despertar donde te dé la gana?Transforma tu vehículo en una auténtica furgoneta camper equipada con todo lo necesario: cama, cocina, sofá, mesa, agua, almacenaje…Con nuestros kits camper autoinstalables, puedes aprovechar el máximo espacio de tu vehículo. Instal …
-                                <div>
-                                    <a href="https://camperizando.es/camperizador/minicamper-pro-2/" rel="noopener" class="btn btn-presupuesto">Presupuesto</a>
-                                </div>
-                            </p>
-                      </details>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img class="image-camperizador" src="./assets/Tutu-Van-1-pygvzbiw9p5ux77gcovgzslddtuwx3f1wxhrxi56ls.jpg" alt="Ejemplo de Tutu Van">
-                    <div>
-                        <div class="camperizador">
-                            <h2>TUTU VAN</h2>
-                        </div>
-                        <details>
-                            <summary>
-                                <h3> ⭐️4,9</h3>
-                                <p class="info">i</p>
-                            </summary>
-                            <p class="descrip-camperizador">
-                                En Tutu Van ofrecemos todos los servicios necesarios para la camperización integral de tu furgo, si necesitas un mueble hecho a medida, una claraboya o todo lo que se te pueda ocurrir para mejorar o ampliar tu furgo camper. Todos nuestros proyectos son a medida teniendo muy en cuenta tus necesidades …
-                                <div>
-                                    <a href="https://camperizando.es/camperizador/tutu-van/" class="btn btn-presupuesto">Presupuesto</a>
-                                </div>
-                            </p>
-                      </details>
-                    </div>
-                    
-                </article>
-
-                <article class="card">
-                <img src="./assets/Pampa-Vans-1-pygvzal22v4kll8ti6gufatwsfzjpebbksuag86ks0.jpg" alt="Ejemplo de Pampa Vans">
-                <div>
-                    <div class="camperizador">
-                        <h2>PAMPA VANS</h2>
-                        
-                    </div>
-                    <details>
-                        <summary>
-                            <h3>⭐️4,9</h3>
-                            <p class="info">i</p>
-                        </summary>
-                            <p class="descrip-camperizador">
-                                Pampa Vans es un taller de camperización situado en Alicante especializados en T5, T6 y Gran volumen, con un amplio catálogo de kits estandarizados para muchos vehículos de medio tamaño (Citroen Berlingo, Peugeot Rifter, Opel Combo, Toyota Proace, Ford Curier, Ford Custom), Volkswagen T5 / T6 y camperi …
-                                <div>
-                                    <a href="https://camperizando.es/camperizador/pampa-vans/" rel="noopener" class="btn btn-presupuesto">Presupuesto</a>
-                                </div>
-                            </p>
-                  </details>
+        <div>
+            <section id="home" class="banner">
+                <div id="claim">
+                    <p>Encontramos al preparador ideal para <span> Camperizar </span> tu furgoneta</p>
                 </div>
-                </article>
-
-                <article class="card">
-                    <img src="./assets/Cultura-Camper.jpg.webp" alt="Ejemplo de Cultura Camper">
-                    <div>
-                        <div class="camperizador">
-                            <h2>CULTURA CAMPER</h2>
-                            
-                        </div>
-                        <details>
-                            <summary>
-                                <h3>⭐️4,5</h3>
-                                <p class="info">i</p>
-                            </summary>
-                                <p class="descrip-camperizador">
-                                    En CulturaCamper ofrecen todo tipo de servicios, desde una camperización parcial y montaje de accesorios, hasta una camperización de furgoneta completa.Puedes encontrar a Mario, Víctor y su equipo en la calle de Joaquim Monmany 26 de Sant Feliu de Llobregat, en la provincia de Barcelona.Las opin …
-                                    <div>
-                                        <a href="https://camperizando.es/camperizador/pampa-vans/" rel="noopener" class="btn btn-presupuesto">Presupuesto</a>
-                                    </div>
-                                </p>
-                      </details>
-                    </div>
+                <div>
+                    <a href="https://camperizando.es/contacto/" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
+                    
+                </div>
+            </section>
+    
+            <section id="camperizadores">
+                <h2 class="section-title">Camperizadores</h2>
+                <div class="cards">
+                    <article class="card">
+                        <img class="image-camperizador" src="./assets/Break-Camper.jpg" alt="imagen de Break Camper">
+                            <div class="camperizador">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <h3 class="camper-name">
+                                                <a href="https://camperizando.es/camperizador/break-camper/" rel="noopener" target="_blank">Break Camper</a>
+                                            </h3>
+                                        </div>
+                                        <div class="puntuacion">
+                                            <p class="stars">⭐️4,6</p><p class="info">i</p>
+                                        </div>
+                                    </summary>
+                                    <p class="descrip-camperizador">
+                                        En Break Camper nos apasiona la aventura tanto como a ti, por ello trasladamos nuestra pasión a la fabricación y personalización de furgonetas camper y vehículos off-road totalmente artesanales. Desde nuestros inicios nuestro objetivo principal es diseñar y fabricar furgos con las mejores capacidad …
+                                        <div>
+                                            <a href="https://camperizando.es/camperizador/break-camper/" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
+                                        </div>
+                                    </p>
+                                </details>
+    
+                            </div>
                     </article>
 
-                <article class="card">
-                    <img class="image-camperizador" src="./assets/The-Camper-Kits-1-pygvzal22v4kll8ti6gufatwsfzjpebbksuag86ks0.png" alt="Ejemplo de The Camper Kits">
-                    <div>
-                        <div class="camperizador">
-                            <h2>THE CAMPER KITS</h2>
-                        </div>
-                        <details>
-                            <summary>
-                                <h3> ⭐️4,7</h3>
-                                <p class="info">i</p>
-                            </summary>
-                            <p class="descrip-camperizador">
-                                ¿Te imaginas escaparte, aparcar y despertar donde te dé la gana?Transforma tu vehículo en una auténtica furgoneta camper equipada con todo lo necesario: cama, cocina, sofá, mesa, agua, almacenaje…Con nuestros kits camper autoinstalables, puedes aprovechar el máximo espacio de tu vehículo. Instal …
-                                <div>
-                                    <a href="https://camperizando.es/camperizador/the-camper-kits-2/" rel="noopener" class="btn btn-presupuesto">Presupuesto</a>
-                                </div>
-                            </p>
-                    </details>
-                    </div>
+                    <article class="card">
+                        <img class="image-camperizador" src="./assets/miniCamper.jpg" alt="imagen de Mini Camper">
+                            <div class="camperizador">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <h3>
+                                                <a href="https://camperizando.es/camperizador/minicamper-pro-2/" rel="noopener" target="_blank">miniCamper.Pro</a>
+                                            </h3>
+                                        </div>
+                                        <div class="puntuacion">
+                                            <p class="stars">⭐️4,8</p><p class="info">i</p>
+                                        </div>
+                                    </summary>
+                                    <p class="descrip-camperizador">
+                                        ¿Te imaginas escaparte, aparcar y despertar donde te dé la gana?Transforma tu vehículo en una auténtica furgoneta camper equipada con todo lo necesario: cama, cocina, sofá, mesa, agua, almacenaje…Con nuestros kits camper autoinstalables, puedes aprovechar el máximo espacio de tu vehículo. Instal …
+                                        <div>
+                                            <a href="https://camperizando.es/camperizador/minicamper-pro-2/" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
+                                        </div>
+                                    </p>
+                                </details>
+    
+                            </div>
+                    </article>
+
+                    <article class="card">
+                        <img class="image-camperizador" src="./assets/Tutu-Van.jpg" alt="imagen de Tutu Van">
+                            <div class="camperizador">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <h3>
+                                                <a href="https://camperizando.es/camperizador/tutu-van" rel="noopener" target="_blank">Tutu Van</a>
+                                            </h3>
+                                        </div>
+                                        <div class="puntuacion">
+                                            <p class="stars">⭐️4,9</p><p class="info">i</p>
+                                        </div>
+                                    </summary>
+                                    <p class="descrip-camperizador">
+                                        En Tutu Van ofrecemos todos los servicios necesarios para la camperización integral de tu furgo, si necesitas un mueble hecho a medida, una claraboya o todo lo que se te pueda ocurrir para mejorar o ampliar tu furgo camper. Todos nuestros proyectos son a medida teniendo muy en cuenta tus necesidades …
+                                        <div>
+                                            <a href="https://camperizando.es/contacto/" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
+                                            
+                                        </div>
+                                    </p>
+                                </details>
+    
+                            </div>
+                    </article>
+
+                    <article class="card">
+                        <img class="image-camperizador" src="./assets/Pampa-Vans.jpg" alt="Imagen de Pampa Vans">
+                            <div class="camperizador">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <h3>
+                                                <a href="https://camperizando.es/camperizador/pampa-vans/" rel="noopener" target="_blank">Pampa Vans</a>
+                                            </h3>
+                                        </div>
+                                        <div class="puntuacion">
+                                            <p class="stars">⭐️4,9</p><p class="info">i</p>
+                                        </div>
+                                    </summary>
+                                    <p class="descrip-camperizador">
+                                        Pampa Vans es un taller de camperización situado en Alicante especializados en T5, T6 y Gran volumen, con un amplio catálogo de kits estandarizados para muchos vehículos de medio tamaño (Citroen Berlingo, Peugeot Rifter, Opel Combo, Toyota Proace, Ford Curier, Ford Custom), Volkswagen T5 / T6 y camperi …
+                                        <div>
+                                            <a href="https://camperizando.es/camperizador/pampa-vans/" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
+                                            
+                                        </div>
+                                    </p>
+                                </details>
+    
+                            </div>
+                    </article>
+
+                    <article class="card">
+                        <img class="image-camperizador" src="./assets/Viste-tu-Furgo.jpg" alt="Imagen de Viste tu furgo">
+                            <div class="camperizador">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <h3>
+                                                <a href="https://camperizando.es/camperizador/viste-tu-furgo/" rel="noopener" target="_blank">Viste tu Furgo</a>
+                                            </h3>
+                                        </div>
+                                        <div class="puntuacion">
+                                            <p class="stars">⭐️4,5</p><p class="info">i</p>
+                                        </div>
+                                    </summary>
+                                    <p class="descrip-camperizador">
+                                        Camperización de furgonetas en Valencia. Servicios profesionales de camperización, asesoramiento y homologación. Si te dicen «No», nosotros lo conseguimos. Servicios profesionales orientados a la camperización de tu furgo. Sea cuál sea la complejidad del proyecto y sea cual sea el tamaño del vehícul …
+                                        <div>
+                                            <a href="https://camperizando.es/camperizador/viste-tu-furgo/" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
+                                            
+                                        </div>
+                                    </p>
+                                </details>
+    
+                            </div>
+                    </article>  
+
+                    <article class="card">
+                        <img class="image-camperizador" src="./assets/The-Camper-Kits.jpeg" alt="Imagen de The Camper Kits">
+                            <div class="camperizador">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <h3>
+                                                <a href="https://camperizando.es/camperizador/the-camper-kits-2/" rel="noopener" target="_blank">The Camper Kits</a>
+                                            </h3>
+                                        </div>
+                                        <div class="puntuacion">
+                                            <p class="stars">⭐️4,7</p><p class="info">i</p>
+                                        </div>
+                                    </summary>
+                                    <p class="descrip-camperizador">
+                                        ¿Te imaginas escaparte, aparcar y despertar donde te dé la gana?Transforma tu vehículo en una auténtica furgoneta camper equipada con todo lo necesario: cama, cocina, sofá, mesa, agua, almacenaje…Con nuestros kits camper autoinstalables, puedes aprovechar el máximo espacio de tu vehículo. Instal …
+                                        <div>
+                                            <a href="https://camperizando.es/camperizador/the-camper-kits-2/" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
+                                            
+                                        </div>
+                                    </p>
+                                </details>
+                            </div>
+                    </article>  
+
+                    <article class="card">
+                        <img class="image-camperizador" src="./assets/Laycamper.jpg" alt="Imagen de Laycamper">
+                            <div class="camperizador">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <h3>
+                                                <a href="https://camperizando.es/camperizador/laycamper-2/" rel="noopener" target="_blank">Laycamper</a>
+                                            </h3>
+                                        </div>
+                                        <div class="puntuacion">
+                                            <p class="stars">⭐️5</p><p class="info">i</p>
+                                        </div>
+                                    </summary>
+                                    <p class="descrip-camperizador">
+                                        Laycamper es una empresa familiar que surgió hace 8 años. Somos un taller de 4 profesionales especializados en todo lo que conlleva una camperización, por lo que cada uno de los trabajadores se implica día a día en cada cliente. Contamos con una experiencia de 15 años en este sector, al que destinam …
+                                        <div>
+                                            <a href="https://camperizando.es/camperizador/laycamper-2/" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
+                                            
+                                        </div>
+                                    </p>
+                                </details>
+    
+                            </div>
+                    </article>  
+
+                    <article class="card">
+                        <img class="image-camperizador" src="./assets/Portcamper.jpg" alt="Imagen de Portcamper">
+                            <div class="camperizador">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <h3>
+                                                <a href="https://camperizando.es/camperizador/portcamper/" rel="noopener" target="_blank">Portcamper</a>
+                                            </h3>
+                                        </div>
+                                        <div class="puntuacion">
+                                            <p class="stars">⭐️5</p><p class="info">i</p>
+                                        </div>
+                                    </summary>
+                                    <p class="descrip-camperizador">
+                                        En Portcamper son especialistas en camperización de furgonetas a medida en Barcelona. Dan forma a tus sueños de libertad adaptándose a tu presupuesto e instalan todo tipo de accesorios. Su manera de entender los viajes, el diseño y la fabricación de furgonetas camper se basa en crear hogares dentro …
+                                        <div>
+                                            <a href="https://camperizando.es/camperizador/portcamper/" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
+                                            
+                                        </div>
+                                    </p>
+                                </details>
+    
+                            </div>
+                    </article>  
+
+                    <article class="card">
+                        <img class="image-camperizador" src="./assets/Survan-Camper.jpeg" alt="Imagen de Survan Camper">
+                            <div class="camperizador">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <h3>
+                                                <a href="https://camperizando.es/camperizador/survan-camper/" rel="noopener" target="_blank">Survan Camper</a>
+                                            </h3>
+                                        </div>
+                                        <div class="puntuacion">
+                                            <p class="stars">⭐️5</p><p class="info">i</p>
+                                        </div>
+                                    </summary>
+                                    <p class="descrip-camperizador">
+                                        Estamos en el Sur, en Cádiz! y nos encanta descubrir lugares únicos en nuestra furgoneta.Nos mueve la pasión por camperizar y ser participes de esta ilusión, tu nueva camper.Hace más de 15 años que viajamos en furgoneta y por eso sabemos y entendemos las necesidades que podemos llegar a tener en …
+                                        <div>
+                                            <a href="https://camperizando.es/camperizador/survan-camper/" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
+                                            
+                                        </div>
+                                    </p>
+                                </details>
+    
+                            </div>
+                    </article>  
+    
+                    <article class="card">
+                        <img class="image-camperizador" src="./assets/Van-Holidays-Camper.jpg" alt="Imagen de Van Holidays">
+                            <div class="camperizador">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <h3>
+                                                <a href="https://camperizando.es/camperizador/vanholidays-camper/" rel="noopener" target="_blank">Van Holidays</a>
+                                            </h3>
+                                        </div>
+                                        <div class="puntuacion">
+                                            <p class="stars">⭐️4,8</p><p class="info">i</p>
+                                        </div>
+                                    </summary>
+                                    <p class="descrip-camperizador">
+                                        En VanHolidays Camper trabajan para conseguir que tu camper esté personalizada al máximo y sea única, usando materiales de primera calidad y las mejores marcas de accesorios. Les puedes encontrar en la Avenida de Humanes 151 en la población de Griñón en la comunidad de Madrid. Si te quieres pasar po …
+                                        <div>
+                                            <a href="https://camperizando.es/camperizador/vanholidays-camper/" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
+                                            
+                                        </div>
+                                    </p>
+                                </details>
+    
+                            </div>
+                    </article>  
+    
+                    <article class="card">
+                        <img class="image-camperizador" src="./assets/Camperizate-Todo-en-1.jpg" alt="Imagen de Camperízate Todo en 1">
+                            <div class="camperizador">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <h3>
+                                                <a href="https://camperizando.es/camperizador/camperizate-todo-en-1-2/" rel="noopener" target="_blank">Camperízate Todo en 1</a>
+                                            </h3>
+                                        </div>
+                                        <div class="puntuacion">
+                                            <p class="stars">⭐️4,4</p><p class="info">i</p>
+                                        </div>
+                                    </summary>
+                                    <p class="descrip-camperizador">
+                                        Nos dedicamos a hacer sueños realidad, camperizando con Kits Muebles Camper a medida, cualquier modelo de furgoneta, algunos monovolúmenes y 4×4.Nuestros Kits Muebles Camper y Mini Camper no requieren ningún tipo de homologación, son Aptos para la ITV, y los equipamos con todo lo necesario para co …
+                                        <div>
+                                            <a href="https://camperizando.es/camperizador/camperizate-todo-en-1-2/" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
+                                        </div>
+                                    </p>
+                                </details>
+                            </div>
+                    </article>  
+    
+                    <article class="card">
+                        <img class="image-camperizador" src="./assets/Van-Cubic.jpeg" alt="Imagen de Van Cubic">
+                            <div class="camperizador">
+                                <details>
+                                    <summary>
+                                        <div>
+                                            <h3>
+                                                <a href="https://camperizando.es/camperizador/van-cubic" rel="noopener" target="_blank">Van Cubic</a>
+                                            </h3>
+                                        </div>
+                                        <div class="puntuacion">
+                                            <p class="stars">⭐️4,7</p><p class="info">i</p>
+                                        </div>
+                                    </summary>
+                                    <p class="descrip-camperizador">
+                                        Vancubic es la empresa líder en camperización modular completa, te ofrecemos la solución mas rápida y versátil del mercado. Con un innovador sistema de módulos adaptables, extraíbles y de fácil montaje, convierte tu furgoneta de gran volumen (en H2 y L1, L2 ,l3 y L4) en un confortable y estiloso hogar, totalmente equipado. Creamos un espacio habitable, funcional y sin la necesidad de homologar. Fácil, cómodo y muy rápido. Con un diseño y acabados de primer nivel. Completa la camperización para dejarla a tu gusto con lo que necesites: ventanas, claraboya, calefacción, placa solar…
+                                        <div>
+                                            <a href="https://camperizando.es/camperizador/van-cubic" rel="noopener" class="btn btn-presupuesto" target="_blank">Presupuesto</a>
+                                        </div>
+                                    </p>
+                                </details>
+                            </div>
+                    </article>  
                     
-                </article>
-
-                <article class="card">
-                        <img class="image-camperizador" src="./assets/Laycamper.jpg" alt="Ejemplo de Laycamper">
-                    <div>
-                        <div class="camperizador">
-                            <h2>LAY CAMPER</h2>
-                        </div>
-                        <details>
-                            <summary>
-                                <h3> ⭐️5</h3>
-                                <p class="info">i</p>
-                            </summary>
-                            <p class="descrip-camperizador">
-                                Laycamper es una empresa familiar que surgió hace 8 años. Somos un taller de 4 profesionales especializados en todo lo que conlleva una camperización, por lo que cada uno de los trabajadores se implica día a día en cada cliente. Contamos con una experiencia de 15 años en este sector, al que destinam …
-                                <div>
-                                    <a href="https://camperizando.es/camperizador/laycamper-2/" rel="noopener" class="btn btn-presupuesto">Presupuesto</a>
-                                </div>
-                            </p>
-                    </details>
-                    </div>  
-                </article>
-
-                <article class="card">
-                    <img class="image-camperizador" src="./assets/Portcamper-1024x775.jpg" alt="Ejemplo de Laycamper">
-                <div>
-                    <div class="camperizador">
-                        <h2>PORT CAMPER</h2>
-                    </div>
-                    <details>
-                        <summary>
-                            <h3> ⭐️4,9</h3>
-                            <p class="info">i</p>
-                        </summary>
-                        <p class="descrip-camperizador">
-                            En Portcamper son especialistas en camperización de furgonetas a medida en Barcelona. Dan forma a tus sueños de libertad adaptándose a tu presupuesto e instalan todo tipo de accesorios. Su manera de entender los viajes, el diseño y la fabricación de furgonetas camper se basa en crear hogares dentro …
-                            <div>
-                                <a href="https://camperizando.es/camperizador/portcamper/" rel="noopener" class="btn btn-presupuesto">Presupuesto</a>
-                            </div>
-                        </p>
-                </details>
-                </div>  
-                </article>
-
-                <article class="card">
-                    <img class="image-camperizador" src="./assets/Survan-Camper-pygvzal22v4kll8ti6gufatwsfzjpebbksuag86ks0.png" alt="Ejemplo de Laycamper">
-                <div>
-                    <div class="camperizador">
-                        <h2>SURVAN CAMPER</h2>
-                    </div>
-                    <details>
-                        <summary>
-                            <h3> ⭐️5</h3>
-                            <p class="info">i</p>
-                        </summary>
-                        <p class="descrip-camperizador">
-                              Estamos en el Sur, en Cádiz! y nos encanta descubrir lugares únicos en nuestra furgoneta.Nos mueve la pasión por camperizar y ser participes de esta ilusión, tu nueva camper.Hace más de 15 años que viajamos en furgoneta y por eso sabemos y entendemos las necesidades que podemos llegar a tener en …
-                            <div>
-                                <a href="https://camperizando.es/camperizador/survan-camper/" rel="noopener" class="btn btn-presupuesto">Presupuesto</a>
-                            </div>
-                        </p>
-                </details>
-                </div>  
-                </article>
-
-                <article class="card">
-                    <img class="image-camperizador" src="./assets/Van-Holidays-Camper-pygvzbiw9p5ux77gcovgzslddtuwx3f1wxhrxi56ls.jpg" alt="Ejemplo de Laycamper">
-                <div>
-                    <div class="camperizador">
-                        <h2>VANHOLIDAYS CAMPER</h2>
-                    </div>
-                    <details>
-                        <summary>
-                            <h3> ⭐️4,8</h3>
-                            <p class="info">i</p>
-                        </summary>
-                        <p class="descrip-camperizador">
-                            En VanHolidays Camper trabajan para conseguir que tu camper esté personalizada al máximo y sea única, usando materiales de primera calidad y las mejores marcas de accesorios. Les puedes encontrar en la Avenida de Humanes 151 en la población de Griñón en la comunidad de Madrid. Si te quieres pasar po …
-                            <div>
-                                <a href="https://camperizando.es/camperizador/vanholidays-camper/" rel="noopener" class="btn btn-presupuesto">Presupuesto</a>
-                            </div>
-                        </p>
-                </details>
-                </div>  
-                </article>
-
-                <article class="card">
-                    <img class="image-camperizador" src="./assets/Camperizate-Todo-en-1-pygvz9n7w13a9za6no27ut2g7246hp7l8o6syy7yy8.jpg" alt="Ejemplo de CAMPERIZATE TODO EN 1">
-                    <div>
-                        <div class="camperizador">
-                            <h2>CAMPERIZATE TODO EN 1</h2>
-                        </div>
-                        <details>
-                            <summary>
-                                <h3> ⭐️4,4</h3>
-                                <p class="info">i</p>
-                            </summary>
-                            <p class="descrip-camperizador">
-                                Nos dedicamos a hacer sueños realidad, camperizando con Kits Muebles Camper a medida, cualquier modelo de furgoneta, algunos monovolúmenes y 4×4.Nuestros Kits Muebles Camper y Mini Camper no requieren ningún tipo de homologación, son Aptos para la ITV, y los equipamos con todo lo necesario para co …
-                                <div>
-                                    <a href="https://camperizando.es/camperizador/camperizate-todo-en-1-2/" rel="noopener" class="btn btn-presupuesto">Presupuesto</a>
-                                </div>
-                            </p>
-                    </details>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img class="image-camperizador" src="./assets/BcnVans-pygvz9n7w13a9za6no27ut2g7246hp7l8o6syy7yy8.jpg" alt="Ejemplo de B C N VANS">
-                    <div>
-                        <div class="camperizador">
-                            <h2>BCNVANS</h2>
-                        </div>
-                        <details>
-                            <summary>
-                                <h3> ⭐️4,3</h3>
-                                <p class="info">i</p>
-                            </summary>
-                            <p class="descrip-camperizador">
-                                El equipo de BcnVans se encarga de ayudarte a dar el primer paso para disfrutar del estilo de vida camper. Su especialidad son los proyectos personalizados y el asesoramiento durante todo el proceso de creación, empezando por la búsqueda de tu furgoneta ideal en los mejores concesionarios de Europa. …
-                                <div>
-                                    <a href="https://camperizando.es/camperizador/bcnvans-2/" class="btn btn-presupuesto">Presupuesto</a>
-                                </div>
-                            </p>
-                    </details>
-                    </div>
-                </article>
-            </div>
-        </section>
+                </div>
+            </section>
+        </div>
 
         <section id="en-camper">
             <h1 class="section-title"><span>Viajar</span> en Camper</h1>
@@ -306,29 +367,25 @@
     </main>
 
     <footer>
-        <div>
-            <h2> 
-                <p>Únete a la comunidad</p> 
-                <p>Camperizando</p>
-            </h2>
+        <section id="contacto">
+            <h2>Únete a la comunidad Camperizando</h2>
             <div id="unete">
                 <p class="consejo">Recibe 11 consejos para encontrar la furgo de tus sueños</p>
                 <div class="email">
-                    <label for="email"/>
+                    <label for="email"></label>
                     <input type="email" id="email" name="email" placeholder="email">
-                    <button name="btn-enviar" class="btn-mail" type="button" value="enviar">unirme</button>
+                    <button name="btn-enviar" class="btn-mail" type="button" value="enviar">Unirme</button>
                 </div>
                 <div class="checkbox-politics">
-                    <label for="check-politics">Acepto los <a href="#checkbox-politics">términos y condiciones</a></label>
+                    <label for="check-politics">Acepto <a href="#checkbox-politics">términos y condiciones </a></label>
                     <input type="checkbox" id="check-politics" name="check-politics">
                 </div>
             </div>
             
-        </div>
-        <div>
-            <p id="yeti">by <span>YETI™</span> 2024©</p>
-        </div>
-
+        </section>
+        <section>
+            <p id="yeti">by <span>YETi</span>™ 2024©</p>
+        </section>
     </footer>
 </body>
 </html>
