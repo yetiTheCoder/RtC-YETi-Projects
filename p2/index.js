@@ -116,6 +116,7 @@ const products = [
 ];
 
 function renderMainContent() {
+  
   const mainContent = document.getElementById("main-content");
   const filterMenu = document.createElement("section");
 
@@ -124,7 +125,7 @@ function renderMainContent() {
         <div class="filters" style="display: none;">
             <div>
                 <label for="brand"></label>
-                <select id="brand">
+                <select class="filter-width button-like" id="brand">
                     <option value="all">Todo</option>
                     <option value="Adidas">Adidas</option>
                     <option value="New Balance">New Balance</option>
@@ -133,10 +134,10 @@ function renderMainContent() {
             </div>
             <div>
                 <label for="price"></label>
-                <input type="range" id="price" min="0" max="250" value="250" oninput="updatePriceLabel(this.value)">
-                <span id="price-label">€</span> 
+                <input class="filter-width" type="range" id="price" min="0" max="250" value="250" oninput="updatePriceLabel(this.value)">
+                <span id="price-label">250€</span> 
             </div>
-            <button class="clear-filters" onclick="clearFilters()">Todo</button>
+            <button class="filter-width button-like" class="clear-filters" onclick="clearFilters()">Todo</button>
         </div>
 
         <div class="space-divider"></div>
@@ -194,11 +195,15 @@ function createProductCard(product) {
   const card = document.createElement("div");
   card.className = "card";
   card.innerHTML = `
-        <img src="${product.image}" alt="${product.model}">
-        <h3>${product.brand}</h3>
-        <p>Model: ${product.model}</p>
-        <p>Price: ${product.price} €</p>
-        <button onclick="buyProduct(${product.id})">Comprar</button>
+        <div class="card-image">
+          <img src="${product.image}" alt="${product.model}">
+        </div>
+        <h2>${product.brand}</h2>
+        <div class="model">
+          <h3>Model: ${product.model}</h3>
+          <p>Price: ${product.price}€</p>
+        </div>
+        <button class="buy-button" onclick="buyProduct(${product.id})">Comprar</button>
     `;
   return card;
 }
@@ -224,7 +229,7 @@ function filterProducts() {
 
 function updatePriceLabel(value) {
   const priceLabel = document.getElementById("price-label");
-  priceLabel.innerText = `${value} €`;
+  priceLabel.innerText = `${value}€`;
 }
 
 function clearFilters() {
@@ -253,7 +258,8 @@ function getRandomAlternatives() {
 }
 
 function buyProduct(id) {
-  alert(`Product: ${id} has been added to the cart!`);
+  const productOnCart = products.find((product) => product.id === id);
+  alert(`Zapatillas ${productOnCart.brand} ${productOnCart.model} a la cesta!`);
 }
 
 renderMainContent();
