@@ -1,4 +1,18 @@
-* {
+:root {
+  --yeti-p2-font-family-default : "Inter", sans-serif;
+  --yeti-p2-font-optical-sizing : auto;
+  --yeti-p2-font-style-default : normal;
+  --yeti-p2-font-weight-regular : 400;
+  --yeti-p2-font-weight-medium : 500;
+  --yeti-p2-font-weight-semibold : 600;
+  --yeti-p2-font-weight-bold : 700;
+  --yeti-p2-font-size-s : 14px;
+  --yeti-p2-font-size-m : 18px;
+  --yeti-p2-font-size-l : 24px;
+  --yeti-p2-font-size-xl : 32px;
+  --yeti-p2-font-size-xxl : 40px;
+  --yeti-p2-font-size-xxxl : 48px;
+
   --yeti-p2-light-background-color: #fff;
 
   --yeti-p2-light-navbar-background-color: #2c2c2c;
@@ -9,10 +23,16 @@
   --yeti-p2-light-filter-arrow-color: #231f20;
   --yeti-p2-light-card-background-color: #f1f1f1;
 
+
+  
+  --yeti-p2-button-border: solid 1px #9b9b9b;
+  --yeti-p2-button-border-radius-default: 5px;
+  
   --yeti-p2-light-button-background-color: #f6f6f6;
-  --yeti-p2-light-button-border-color: #f6f6f6;
-  --yeti-p2-light-button-shadow-color: #00000040;
   --yeti-p2-light-button-selected-color: #fff852;
+  --yeti-p2-light-button-text-color: #000000;
+  --yeti-p2-light-button-shadow-color: 0px 0px 10px 0px #00000040;
+
 
   --yeti-p2-light-a_default-color: #000;
   --yeti-p2-light-a_secondary-color: #fff;
@@ -26,9 +46,17 @@ h2,
 h3,
 p,
 ul {
+  font-family: var(--yeti-p2-font-default-family);
+  font-optical-sizing: var(--yeti-p2-font-default-optical-sizing);
+  font-style: var(--yeti-p2-font-default-style);
   margin: 0;
   padding: 0;
   z-index: 0;
+  width: 100%;
+}
+
+p, li {
+  font-weight: var(--yeti-p2-font-default-weight);
 }
 
 header {
@@ -77,7 +105,7 @@ header > .nav-bar {
   cursor: pointer;
 }
 
-#hero-content {
+#hero-image {
   width: 100%;
   height: auto;
   background-size: cover;
@@ -99,13 +127,13 @@ main {
 }
 
 .filters {
-  display: block;
+  display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
   background-color: var(--yeti-p2-light-filter-background-color);
   gap: 8px;
-  /* padding: 16px; */
+  padding: 16px;
 }
 
 .space-divider {
@@ -180,13 +208,17 @@ input[type="checkbox"]:checked + label.flipping-svg svg {
 button {
   background-color: var(--yeti-p2-light-button-background-color);
   color: var(--yeti-p2-light-a_default-color);
-  padding: 10px;
+  border: var(--yeti-p2-button-border);
+  border-radius: var(--yeti-p2-button-border-radius);
+  box-shadow: var(--yeti-p2-button-box-shadow);
+  padding: 17px 0px;
+  font-size: var(--yeti-p2-font-size-xl);
+
   cursor: pointer;
-  width: 100%;
 }
 
 .card button:hover {
-  background-color: var(--yeti-p2-light-a_contrast-color);
+  background-color: var(--yeti-p2-light-button-selected-color);
 }
 
 footer {

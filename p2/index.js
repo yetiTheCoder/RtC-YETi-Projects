@@ -133,7 +133,7 @@ function renderMainContent() {
             </div>
             <div>
                 <label for="price"></label>
-                <input type="input" id="price" min="0" max="250" value="250" oninput="updatePriceLabel(this.value)">
+                <input type="range" id="price" min="0" max="250" value="250" oninput="updatePriceLabel(this.value)">
                 <span id="price-label">€</span> 
             </div>
             <button class="clear-filters" onclick="clearFilters()">Todo</button>
@@ -141,8 +141,8 @@ function renderMainContent() {
 
         <div class="space-divider"></div>
         
-        <div class="filter-icon" onclick="toggleFilterMenu()">
-          <input type="checkbox" id="down-up">
+        <div class="filter-icon">
+          <input type="checkbox" id="down-up" onclick="toggleFilterMenu()">
           <label for="down-up" class="flipping-svg">
               <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75" fill="none">
                 <path d="M38.5008 51.3335C37.7512 51.3349 37.0247 51.0738 36.4475 50.5955L17.1975 34.5539C16.5423 34.0093 16.1302 33.2267 16.052 32.3784C15.9738 31.53 16.2358 30.6853 16.7804 30.0301C17.325 29.3749 18.1075 28.9629 18.9559 28.8847C19.8042 28.8065 20.6489 29.0684 21.3041 29.613L38.5008 43.9864L55.6975 30.1264C56.0256 29.8599 56.4033 29.6608 56.8086 29.5407C57.2139 29.4207 57.639 29.3819 58.0594 29.4266C58.4798 29.4713 58.8872 29.5987 59.2582 29.8013C59.6292 30.004 59.9565 30.278 60.2212 30.6076C60.515 30.9375 60.7376 31.3245 60.8749 31.7444C61.0121 32.1643 61.0612 32.608 61.0191 33.0477C60.9769 33.4875 60.8444 33.9138 60.6298 34.2999C60.4152 34.6861 60.1232 35.0237 59.772 35.2918L40.5221 50.788C39.9282 51.1907 39.2166 51.3828 38.5008 51.3335Z" fill="var(--yeti-p2-light-filter-arrow-color)"/>
@@ -237,7 +237,7 @@ function clearFilters() {
 function toggleFilterMenu() {
   const filterMenu = document.querySelector(".filters");
   filterMenu.style.display =
-    filterMenu.style.display === "none" ? "block" : "none";
+    filterMenu.style.display === "none" ? "flex" : "none";
 }
 
 
