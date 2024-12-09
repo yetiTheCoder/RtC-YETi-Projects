@@ -118,26 +118,49 @@ const products = [
 function renderMainContent() {
   
   const mainContent = document.getElementById("main-content");
+  const heroContent = document.createElement("section");
   const filterMenu = document.createElement("section");
+
+  heroContent.className = "hero-section";
+  heroContent.innerHTML = `
+    <hero id="jd-home" class="hero-content">
+        <h1>Zapatillas de marca en JD</h1>
+        <img
+          id="hero-image"
+          src="./assets/hero_image-JD_Sports.jpg"
+          alt="imagen JD Sports"
+        />
+      </hero>
+
+      <div class="hero-text">
+          <h1 class="main-title">Zapatillas para todos</h1>
+          <p class="main-subtitle">Encuentra la mejor zapatilla para ti</p>
+      </div>
+    `;
 
   filterMenu.className = "filter-menu";
   filterMenu.innerHTML = `
         <div class="filters" style="display: none;">
-            <div>
+            <div class="button-brand button-like">
                 <label for="brand"></label>
-                <select class="filter-width button-like" id="brand">
+                <select id="brand">
                     <option value="all">Todo</option>
                     <option value="Adidas">Adidas</option>
                     <option value="New Balance">New Balance</option>
                     <option value="Nike">Nike</option>
                 </select>
             </div>
-            <div>
+            <div class="button-price button-like">
                 <label for="price"></label>
-                <input class="filter-width" type="range" id="price" min="0" max="250" value="250" oninput="updatePriceLabel(this.value)">
-                <span id="price-label">250€</span> 
+                <div class="price-range">
+                  <span id="price-label">250€</span> 
+                  <input  type="range" id="price" min="0" max="250" value="250" oninput="updatePriceLabel(this.value)">
+                </div>
+                
             </div>
-            <button class="filter-width button-like" class="clear-filters" onclick="clearFilters()">Todo</button>
+            <div class="button-clear button-like">
+              <button class="clear-filters" onclick="clearFilters()">Todo</button>
+            </div>
         </div>
 
         <div class="space-divider"></div>
@@ -151,6 +174,7 @@ function renderMainContent() {
           </label>
         </div>
     `;
+  mainContent.appendChild(heroContent);
   mainContent.appendChild(filterMenu);
 
   const productContainer = document.createElement("section");
@@ -161,21 +185,17 @@ function renderMainContent() {
   renderProducts(products);
 }
 
-
-
 function renderProducts(filteredProducts) {
   const productContainer = document.getElementById("product-container");
   productContainer.innerHTML = "";
 
   if (filteredProducts.length === 0) {
     const message = document.createElement("p");
-    message.innerText =
-      "No queda nada con las opciones que buscas, pero ¡Mira estas sugerencias para tí!";
+    message.innerText = "No queda nada así, te sugiero éstas";
     productContainer.appendChild(message);
-
-    const suggestions = getRandomAlternatives();
-    renderSuggestionProducts(suggestions, productContainer);
-    return;
+    const suggestions =  getRandomAlternatives();
+      renderSuggestionProducts(suggestions, productContainer);
+      return;
   }
 
   filteredProducts.forEach((product) => {
@@ -199,10 +219,16 @@ function createProductCard(product) {
           <img src="${product.image}" alt="${product.model}">
         </div>
         <div class="card-text">
-          <h2 class="brand-name">${product.brand}</h2>
-          <div class="model">
-            <h3>${product.model}</h3>
-            <p>${product.price}€</p>
+          <div class="brand-name">
+            <h2>${product.brand}</h2>
+          </div>          
+          <div class="model"> 
+            <div class="model-name">
+              <h3>${product.model}</h3>
+            </div>
+            <div class="model-price">
+              <p>${product.price}€</p>
+            </div>
           </div>
           <div class="buy-product">
             <button class="buy-button" onclick="buyProduct(${product.id})">Comprar</button>
@@ -263,7 +289,7 @@ function getRandomAlternatives() {
 
 function buyProduct(id) {
   const productOnCart = products.find((product) => product.id === id);
-  alert(`Zapatillas ${productOnCart.brand} ${productOnCart.model} ya son tuyas!`);
+  alert(`Zapatillas ${productOnCart.brand} ${productOnCart.model}, ya son tuyas!`);
 }
 
 renderMainContent();
