@@ -144,7 +144,7 @@ function renderMainContent() {
             <div class="button-brand button-like">
                 <label for="brand"></label>
                 <select id="brand">
-                    <option value="all">Todo</option>
+                    <option value="all">Todas las marcas </option>
                     <option value="Adidas">Adidas</option>
                     <option value="New Balance">New Balance</option>
                     <option value="Nike">Nike</option>
@@ -159,7 +159,7 @@ function renderMainContent() {
                 
             </div>
             <div class="button-clear button-like">
-              <button class="clear-filters" onclick="clearFilters()">Todo</button>
+              <button id="all" class="clear-filters" onclick="clearFilters()">Ver todo</button>
             </div>
         </div>
 
@@ -219,15 +219,17 @@ function createProductCard(product) {
           <img src="${product.image}" alt="${product.model}">
         </div>
         <div class="card-text">
-          <div class="brand-name">
-            <h2>${product.brand}</h2>
-          </div>          
-          <div class="model"> 
-            <div class="model-name">
-              <h3>${product.model}</h3>
-            </div>
-            <div class="model-price">
-              <p>${product.price}€</p>
+          <div class="brand-model">
+            <div class="brand-name">
+              <h2>${product.brand}</h2>
+            </div>          
+            <div class="model"> 
+              <div class="model-name">
+                <h3>${product.model}</h3>
+              </div>
+              <div class="model-price">
+                <p>${product.price}€</p>
+              </div>
             </div>
           </div>
           <div class="buy-product">
