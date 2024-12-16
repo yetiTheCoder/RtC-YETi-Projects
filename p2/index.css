@@ -24,7 +24,7 @@
   --yeti-p2-secondary-background-color: #f6f6f6;
 
   --yeti-p2-light-navbar-background-color: var(--yeti-p2-primary-color);
-  --yeti-p2-light-footer-background-color: #2c2c2c;
+  --yeti-p2-light-footer-background-color: #000000;
 
   --yeti-p2-light-filter-background-color: #efefef;
   --yeti-p2-light-filter-arrow-color: #231f20;
@@ -182,13 +182,12 @@ header {
 
 .menu li:hover {
   color: var(--yeti-p2-light-a_contrast-color);
-  transform: scale(1.1);
+  font-weight: var(--yeti-p2-font-weight-semibold);
   transition: transform 0.1s ease;
 }
 
 .menu li:active {
   color: var(--yeti-p2-light-a_contrast-color);
-  transform: scale(1);
 }
 
 .icons {
@@ -552,19 +551,46 @@ footer {
   color: var(--yeti-p2-light-a_secondary-color);
   flex-shrink: 0;
   flex-wrap: wrap;
+  padding: 49px 82px;
+  gap: 25px 200px;
+  align-self: stretch;
 }
 
-.footer-list * {
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  
+}
+
+.footer-list > ul {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 15px;
+  gap: 7px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.footer-list > ul > li {
+  display: flex;
   color: var(--yeti-p2-light-a_secondary-color);
   text-decoration: none;
-  font-size: var(--yeti-p2-font-size-m);
-  font-weight: var(--yeti-p2-font-weight-regular);
+  font-size: var(--yeti-p2-font-size-l);
   list-style: none;
+}
+
+.footer-list > ul > li:hover {
+  color: var(--yeti-p2-light-button-selected-color);
 }
 
 .font-bold {
   font-weight: var(--yeti-p2-font-weight-bold);
 }
+
+
 
 @media (max-width: 867px) {
 
@@ -587,6 +613,7 @@ footer {
   }
 
   footer {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
